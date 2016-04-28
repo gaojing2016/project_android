@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:stretchColumns="1"
+    android:layout_height="match_parent" >
+    <gaojing.layoutui.TittleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </gaojing.layoutui.TittleLayout>
+
+    <!--
+    <include layout="@layout/tittle" />
+    -->
+
+<TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_height="wrap_content"
+        android:text="Account:"
+        android:layout_width="match_parent" />
+
+    <EditText
+        android:id="@+id/account"
+        android:layout_height="wrap_content"
+        android:hint="Input your account"
+        android:layout_width="match_parent" />
+</TableRow>
+
+    <TableRow android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:layout_width="match_parent" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_width="match_parent" />
+    </TableRow>
+
+    <TableRow android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/login"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:text="Login"
+            />
+
+    </TableRow>
+
+
+</TableLayout>

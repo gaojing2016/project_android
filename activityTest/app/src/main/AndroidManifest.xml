@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gaojing.activitytest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- -->
+        <!--android:launchMode="singleTop"-->
+        <activity android:name=".FirstActivity"
+            android:launchMode="singleTask"
+            android:label="ActivityTest" >
+            <intent-filter>
+                <!--data标签中可以配置以下内容-->
+                <!--只有<data>标签内容和Intent中携带的Data完全一致时，当前活动才能够响应该Intent。-->
+                <!--一般不会在该标签内指定过多内容，例如访问网页只要指定http即可-->
+                <!--android:scheme 用于指定数据的协议部分，如http-->
+                <!--android:host 用于指定数据的主机名部分-->
+                <!--android:port 用于指定数据的端口部分，一般紧随在主机名之后-->
+                <!--android:path 用于指定主机名和端口之后的部分，如一段网址中跟在域名之后的内容-->
+                <!--android:mimeType 用于指定可以处理的数据类型，允许使用通配符的方式进行指定-->
+                <data>
+                    android:scheme="http"
+                    android:host="www.sina.com"
+                    </data>>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 因为SecondActivity不是主活动，所以不需要配置<intent-filter>标签里的内容 -->
+        <activity android:name=".SecondActivity"
+            android:launchMode="singleInstance">
+            <!-- 通过配置<intent-filter>可以指定当前活动能够响应的action和category -->
+            <!-- <action>标签指明了当前活动可以响应gaojing.activitytest.ACTION_START这个action-->
+            <!-- <category>标签则包含了一些附加信息，更精确地指明了当前的活动能够响应的Intent中还可能带有的category-->
+            <!-- 只有<action>和<category>中的内容同时能够匹配上Intent中指定的action和Integory时，这个活动才能响应该Intent。-->
+            <!-- 每个Intent中智能指定一个action，但却能指定多个category-->
+            <intent-filter>
+                <action android:name="gaojing.activitytest.ACTION_START" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="gaojing.activitytest.MY_CATEGORY" />
+                </intent-filter>>
+            </activity>
+
+            <activity android:name=".ThirdActivity">
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW" />
+                        <category android:name="android.intent.category.DEFAULT" />
+                    <data android:scheme="http" />
+                    </intent-filter>
+            </activity>
+    </application>
+
+</manifest>
