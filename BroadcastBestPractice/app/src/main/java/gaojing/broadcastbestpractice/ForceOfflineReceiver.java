@@ -17,17 +17,15 @@ public class ForceOfflineReceiver extends BroadcastReceiver {
     public void onReceive(final Context context, Intent intent) {
         Log.d("GaoJing", "receive broadcast");
 
-        Toast.makeText(context, "dddddddddd", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "dddddddddd", Toast.LENGTH_SHORT).show();
 
-
-        //Toast.makeText(ForceOfflineReceiver.this, "receive local broad cast", Toast.LENGTH_SHORT).show();
-        /*
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context); //构建一个对话框
         dialogBuilder.setTitle("Warning");
         dialogBuilder.setMessage("You are forced to be offline. please try to login again.");
         dialogBuilder.setCancelable(false); //将对话框设为不可取消，否则用户按一下back键就可以关闭对话框继续使用程序了
         //给对话框注册确定按钮
-        dialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        dialogBuilder.setPositiveButton("OK",
+                new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 ActivityCollector.finishAll();//销毁所有活动
@@ -43,7 +41,7 @@ public class ForceOfflineReceiver extends BroadcastReceiver {
 
         alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
         alertDialog.show();
-        */
+
     }
 
     /*

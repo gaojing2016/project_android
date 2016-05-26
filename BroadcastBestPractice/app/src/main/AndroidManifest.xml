@@ -23,13 +23,12 @@
         <activity android:name=".MainActivity">
         </activity>
 
-        <receiver android:name=".ForceOfflineReceiver">
+
+        <receiver android:name=".ForceOfflineReceiver" >
             <intent-filter>
                 <action android:name="gaojing.broadcastbestpractice.FORCE_OFFLINE" />
             </intent-filter>
-
         </receiver>
-
 
 
     </application>

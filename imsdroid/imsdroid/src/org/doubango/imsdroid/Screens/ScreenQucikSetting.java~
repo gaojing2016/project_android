@@ -1,0 +1,25 @@
+package org.doubango.imsdroid.Screens;
+
+import android.os.Bundle;
+
+import org.doubango.imsdroid.R;
+
+
+/**
+ * Created by gaojing on 16-4-25.
+ */
+public class ScreenQucikSetting extends BaseScreen {
+
+    private static String TAG = ScreenQucikSetting.class.getCanonicalName();
+
+    public ScreenQucikSetting() {
+        super(SCREEN_TYPE.QUICK_SETTINGS_T, TAG);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        Log.d("GaoJing", "Enter quick setting class");
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.screen_quick_settings);
+    }
+}
